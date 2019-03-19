@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Food
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Food\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Food()
+comment2.params=e
+comment2.target=Food(double)
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\r\n\ Act\ -\ do\ whatever\ the\ Food\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment4.params=amount
+comment4.target=void\ removeEnergy(double)
+comment5.params=
+comment5.target=void\ setEnergy()
+comment6.params=energy
+comment6.target=void\ setEnergy(double)
+comment7.params=
+comment7.target=boolean\ stillAvailable()
+comment8.params=ant
+comment8.target=void\ carry(Ant)
+numComments=9
