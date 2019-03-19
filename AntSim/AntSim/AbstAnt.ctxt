@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=AbstAnt
+comment1.params=
+comment1.target=void\ act()
+comment2.params=
+comment2.target=void\ attack()
+comment3.params=
+comment3.target=void\ track()
+comment4.params=
+comment4.target=void\ collectFood()
+comment5.params=
+comment5.target=void\ leaveTrail()
+numComments=6

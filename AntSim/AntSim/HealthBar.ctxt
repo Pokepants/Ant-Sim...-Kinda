@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=HealthBar
+comment0.text=\ \r\n\ A\ pretty\ cool\ health\ bar\ with\ a\ low\ computational\ footprint,\ and\ autoupdating\ \r\n\ spawn\ it\ in\ and\ then\ forget\ it\ \r\n\r\n\ @author\ Nathan\ Rowbottom\ \r\n\ @version\ Feb\ 26,\ 2019\ \r\n
+comment1.params=o\ maxHeath
+comment1.target=HealthBar(AbstAnt,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ kys()
+comment4.params=
+comment4.target=void\ update()
+numComments=5
