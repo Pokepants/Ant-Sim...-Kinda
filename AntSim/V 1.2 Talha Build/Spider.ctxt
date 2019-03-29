@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Spider
+comment1.params=
+comment1.target=void\ act()
+comment2.params=distance
+comment2.target=void\ move(int)
+comment3.params=
+comment3.target=void\ eat()
+comment4.params=
+comment4.target=void\ attack()
+comment5.params=
+comment5.target=void\ track()
+comment6.params=
+comment6.target=void\ collectFood()
+comment7.params=
+comment7.target=void\ leaveTrail()
+comment8.params=damage
+comment8.target=void\ takeDamage(double)
+numComments=9

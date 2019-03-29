@@ -1,4 +1,5 @@
  import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+ import java.util.*;
  
 public class AntArena extends World
 {
@@ -10,7 +11,7 @@ public class AntArena extends World
     Colony swarm;
     LabelTwo label;
     
-    int numAnts = 40;
+    //int numAnts = 40;
     int numFood = 10;
     int numSpider = 40;
     int numColony = 1;
@@ -32,12 +33,12 @@ public class AntArena extends World
             spider = new Spider();
             addObject(spider, Greenfoot.getRandomNumber(getWidth()), Greenfoot.getRandomNumber(getHeight()));
         }
-        
+        /*
         for (int i = 0; i < numAnts; i++){
             ant = new Ant();
             addObject(ant, Greenfoot.getRandomNumber(getWidth()), Greenfoot.getRandomNumber(getHeight()));
         }
-        
+        */
         for (int i = 0; i < numFood; i++){ 
             addObject(new Food(800), Greenfoot.getRandomNumber(getWidth()), Greenfoot.getRandomNumber(getHeight()));
         }

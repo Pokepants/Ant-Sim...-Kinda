@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Ant
+comment1.params=c\ a\ h\ e
+comment1.target=Ant(Colony,\ int,\ int,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=distance
+comment3.target=void\ move(int)
+comment4.params=e
+comment4.target=void\ eat(double)
+comment5.params=
+comment5.target=void\ attack()
+comment6.params=
+comment6.target=void\ track()
+comment7.params=
+comment7.target=void\ collectFood()
+comment8.params=
+comment8.target=void\ leaveTrail()
+comment9.params=damage
+comment9.target=void\ takeDamage(double)
+numComments=10

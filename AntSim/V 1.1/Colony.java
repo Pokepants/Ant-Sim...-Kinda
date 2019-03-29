@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.*;
 
 /**
  * Write a description of class Colony here.
@@ -12,12 +13,12 @@ public class Colony extends AbstAnt
         DEAD,SPAWN,IDLE
     }
 
-    AntArena world;
-    AbstAnt ant;
+    Ant ants;
     double energy = 1000;
     double energyThresh = 3000;
     private double spawncost = 1;//TBD
     double health = 10000;
+    int numAnts = 40;
 
     protected ColonyState state = ColonyState.IDLE;
     protected HealthBar chb;
@@ -31,19 +32,17 @@ public class Colony extends AbstAnt
             getWorld().addObject(chb,this.getX(),this.getY()-getImage().getHeight()/2);
 
             chb.update();
-        }   
-        if(world == null){
-            world = (AntArena)getWorld();
         }
-        
         if(state == ColonyState.IDLE){
             if (energy>=0){
                 state = ColonyState.SPAWN;
             }
 
         }else if (state == ColonyState.SPAWN){
-            if(energy>=0){
-
+            List<Ant> nAnt = getObject(Ant.class);
+            if(energy>=0 && nAnt.size() > numAnts){
+                ants = new Ant();
+                getWorld().addObject(ants, getX(), getY());
             }
 
             if (energy<=0){
