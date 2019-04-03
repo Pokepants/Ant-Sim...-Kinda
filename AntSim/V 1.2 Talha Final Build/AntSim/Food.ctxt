@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Food
+comment1.params=
+comment1.target=Food()
+comment2.params=e
+comment2.target=Food(double)
+comment3.params=
+comment3.target=void\ act()
+comment4.params=amount
+comment4.target=void\ removeEnergy(double)
+comment5.params=
+comment5.target=void\ setEnergy()
+comment6.params=energy
+comment6.target=void\ setEnergy(double)
+comment7.params=
+comment7.target=boolean\ stillAvailable()
+numComments=8
