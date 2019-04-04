@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Ant
+comment1.params=c\ a\ h\ e
+comment1.target=Ant(Colony,\ int,\ int,\ int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=distance
+comment3.target=void\ move(int)
+comment4.params=items
+comment4.target=BREADIT\ getSnak(java.util.List)
+numComments=5
