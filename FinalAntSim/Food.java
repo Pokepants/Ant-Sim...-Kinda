@@ -8,7 +8,14 @@ public abstract class Food extends Actor
     private double size = 30;
     private double weight = 10;
     public Colony colony;
+    boolean carried = false;
     
+    Ant ant;
+    
+    public void collected(boolean carry) {
+        carried = carry;
+    } 
+
     public Food() {
         setEnergy();
     }

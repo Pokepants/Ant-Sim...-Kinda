@@ -7,6 +7,7 @@ public class TitleScreen extends World
     TitleScreen titleScreen;
     Label label;
     Label how2;
+    Dance dance;
     //int on = 1;
 
     private GreenfootSound gameSound1= new GreenfootSound("C418 - Key - Minecraft Volume Alpha.wav");
@@ -17,6 +18,7 @@ public class TitleScreen extends World
 
         label = new Label("Ant Simulator", 200);
         how2 = new Label("Press up to start the simulator", 50);
+        dance = new Dance();
         addObject(label, 550, 100);
         addObject(how2, 550, 400);
     }
@@ -40,5 +42,7 @@ public class TitleScreen extends World
         }*/
 
         gameSound1.playLoop();
+        
+        addObject(dance, getWidth()/2, getHeight()/2);
     }
 }

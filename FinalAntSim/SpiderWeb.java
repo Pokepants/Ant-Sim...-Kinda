@@ -28,6 +28,7 @@ public class SpiderWeb extends Actor
                 int stuck = 0;
                 for(int i = 0; i < preys.size(); i++){
                     preys.get(i).speed = stuck;
+                    preys.get(i).attack = stuck;
                 }
             }
         }

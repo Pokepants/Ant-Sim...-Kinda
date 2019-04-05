@@ -10,7 +10,6 @@ import java.util.*;
 public class LadyBug extends AbstAnt
 {
 
-    int speed = 1;
     double health = 100;
     double energy = 100;
     AntState state = AntState.IDLE;

@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class BREADIT here.
+ * Write a description of class DeadLadyBug here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BREADIT extends Food
+public class DeadLadyBug extends Food
 {
-    
+   
 }

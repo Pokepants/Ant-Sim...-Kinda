@@ -8,7 +8,7 @@ import java.lang.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Colony extends AbstAnt
+public class Colony extends Actor
 
 {enum ColonyState{
         DEAD,SPAWN,IDLE
@@ -38,12 +38,7 @@ public class Colony extends AbstAnt
         }
         if (tracker == null){
             tracker = new statTracker(this);
-        }
-        if(chb == null){
-            chb = new HealthBar(this,(int)health);
-            getWorld().addObject(chb,this.getX(),this.getY()-getImage().getHeight()/2);
-            chb.update();
-        }   
+        } 
         if(world == null){
             world = (AntArena)getWorld();
         }

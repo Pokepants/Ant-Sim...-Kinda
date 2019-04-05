@@ -7,9 +7,8 @@ public class Ant extends AbstAnt
     protected double energyThreshold = 15;
 
     AbstAnt target;
-    BREADIT snak;
+    Food snak;
     LadyBug extrafd;
-    Colony colony;
     DeadAnt dedaflmaoPressFinchat;
 
     public static int spawnTime = 1000;
@@ -30,8 +29,9 @@ public class Ant extends AbstAnt
                 health++;
                 energy -=5;
             }
+
             if(snak == null){
-                List<BREADIT> cFoods = getObjectsInRange(sightRange, BREADIT.class);
+                List<Food> cFoods = getObjectsInRange(sightRange, Food.class);
                 snak = getSnak(cFoods);
             }
 
@@ -42,6 +42,16 @@ public class Ant extends AbstAnt
                 }
                 else if(energy < energyThreshold){
                     //set to foraging
+                    List<Food> prospects = getObjectsInRange(sightRange, Food.class);
+                    if (prospects.size() > 0){
+                        for (int i = 0; i < prospects.size(); i++){
+                            snak = prospects.get(i);
+                            if (snak.colony != this.colony){
+                                state = AntState.FORAGE;
+                                i = prospects.size();
+                            }
+                        }
+                    }
                     state = AntState.FORAGE;
                     return;
 
@@ -52,15 +62,17 @@ public class Ant extends AbstAnt
                     int fdsize = extrafds.size();
                     extrafd = extrafds.get(0);
                     state = AntState.FORAGE;
+                    return;
                 }
             }
             //else if look for an ant to attack
             List<AbstAnt> targets = getObjectsInRange(sightRange, AbstAnt.class);
             if (targets.size()>0 && energy > energyThreshold){
                 for (int i = 0; i < targets.size(); i++){
+                    target = targets.get(i);
                     if (targets.get(i).colony != this.colony){
-                        target = targets.get(0);
                         state = AntState.ATTACK;
+                        i = targets.size();
                     }
                 }
             }
@@ -70,7 +82,7 @@ public class Ant extends AbstAnt
                 target = null;
                 state = AntState.IDLE;
             }
-            else if (energy < energyThreshold && getObjectsInRange(sightRange, BREADIT.class).size()>0 && snak!=null){
+            else if (energy < energyThreshold && getObjectsInRange(sightRange, Food.class).size()>0 && snak!=null){
                 state = AntState.IDLE;
             }
             else if (isTouching(AbstAnt.class) && getOneIntersectingObject(AbstAnt.class) == target){
@@ -80,7 +92,7 @@ public class Ant extends AbstAnt
                 target.takeDamage(damage);
                 if (target.getHealth()> 0){
                     colony.tracker.enemyDef();
-                    System.out.println(colony.tracker.cEnemyDef());
+                    //System.out.println(colony.tracker.cEnemyDef());
                 }
                 energy -= (damage*0.1);
                 hb.update();
@@ -203,9 +215,9 @@ public class Ant extends AbstAnt
             state = AntState.DEAD;
         }
     }
-    
-    protected BREADIT getSnak(List <BREADIT> items){
-        for(BREADIT item : items){
+
+    protected Food getSnak(List <Food> items){
+        for(Food item : items){
             if (item.carried == false){
                 item.carried = true;
                 return item;
@@ -213,5 +225,5 @@ public class Ant extends AbstAnt
         }
         return null;
     }
-    
+
 }
